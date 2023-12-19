@@ -236,6 +236,6 @@ std::ostream& operator<<(std::ostream& o, const gcomplex& z)
 	return o;
 }
 
-
-gcomplex i(0, 1);
-gcomplex j(0, 1);
+//常数i、j，单位纯虚数
+const gcomplex I(0, 1);
+const gcomplex J(0, 1);

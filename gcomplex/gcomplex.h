@@ -117,8 +117,8 @@ gcomplex log(gcomplex, gcomplex);
 std::ostream& operator<<(std::ostream& o, const gcomplex&);
 
 
-extern gcomplex i;
-extern gcomplex j;
+extern const gcomplex I;
+extern const gcomplex J;
 
 
 

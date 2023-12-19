@@ -1,12 +1,14 @@
 
 #include <iostream>
+
 #include "gcomplex.h"
+
 using namespace std;
 int main()
 {
 	std::cout << "Hello World!\n";
-	gcomplex a = i * 3 + 2;
-	gcomplex b = 3 + 4 * i;
+	gcomplex a = I * 3 + 2;
+	gcomplex b = 3 + 4 * I;
 
 	std::cout << "abs(b)=" << b.abs() << endl;
 	string s1, s2;
@@ -22,5 +24,7 @@ int main()
 	real(f) = 10;
 	cout << "\t" << f << endl;
 	cout << gsqrt(-5)<<endl;
-	cout << ln(f);
+	cout << ln(f) << endl;
+	cout << pow(10 + 6 * I, 2)<<endl;
+	cout << 2 + 3 * I;
 }
