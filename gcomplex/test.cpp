@@ -1,6 +1,6 @@
 
 #include <iostream>
-
+#include <string>
 #include "gcomplex.h"
 
 using namespace std;
@@ -26,5 +26,23 @@ int main()
 	cout << gsqrt(-5)<<endl;
 	cout << ln(f) << endl;
 	cout << pow(10 + 6 * I, 2)<<endl;
-	cout << 2 + 3 * I;
+	cout << 2 + 3 * I << endl;
+	cout << conj(2 + 3 * I)<<endl;
+	s1 = "25";
+	s2 = s1;
+	//to_integer(s1);
+	cout << abs(3 + 1 * I + 3 * I) << endl<<endl;
+	cout << sin(3.1415926 / 2 + 0 * I) << endl;
+	cout << cos(3.1415926 / 2 + 0 * I) << endl;
+	cout << tan(3.1415926 / 2 + 0 * I) << endl;
+	cout << sec(3.1415926 / 2 + 0 * I) << endl;
+	cout << csc(3.1415926 / 2 + 0 * I) << endl;
+	cout << cot(3.1415926 / 2 + 0 * I) << endl;
+	cout << "==========\n";
+	cout << sin(3.1415926 / 2) << endl;
+	cout << cos(3.1415926 / 2) << endl;
+	cout << tan(3.1415926 / 2) << endl;
+	cout << sec(3.1415926 / 2) << endl;
+	cout << csc(3.1415926 / 2) << endl;
+	cout << cot(3.1415926 / 2) << endl;
 }
