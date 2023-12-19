@@ -104,9 +104,56 @@ gcomplex gcomplex::operator /(double n)const
 	return t;
 }
 
+gcomplex& gcomplex::operator +=(const gcomplex& z)
+{
+	this->_cp=gsl_complex_add(this->_cp,z._cp);
+	return *this;
+}
+gcomplex& gcomplex::operator -=(const gcomplex& z)
+{
+	this->_cp = gsl_complex_sub(this->_cp, z._cp);
+	return *this;
+}
+gcomplex& gcomplex::operator *=(const gcomplex& z)
+{
+	this->_cp=gsl_complex_mul(this->_cp,z._cp);
+	return *this;
+}
+gcomplex& gcomplex::operator /=(const gcomplex& z)
+{
+	this->_cp = gsl_complex_div(this->_cp, z._cp);
+	return *this;
+}
+
+gcomplex& gcomplex::operator +=(double x)
+{
+	this->_cp = gsl_complex_add_real(this->_cp, x);
+	return *this;
+}
+gcomplex& gcomplex::operator -=(double x)
+{
+	this->_cp=gsl_complex_sub_real(this->_cp,x);
+	return *this;
+}
+gcomplex& gcomplex::operator *=(double x)
+{
+	this->_cp=gsl_complex_mul_real(this->_cp,x);
+	return *this;
+}
+gcomplex& gcomplex::operator /=(double x)
+{
+	this->_cp=gsl_complex_div_real(this->_cp,x);
+	return *this;
+}
+
 gcomplex& gcomplex::operator =(const gcomplex&z)
 {
 	this->_cp = z._cp;
+	return *this;
+}
+gcomplex& gcomplex::operator =(const gsl_complex&z)
+{
+	this->_cp = z;
 	return *this;
 }
 gcomplex& gcomplex::operator =(double a)

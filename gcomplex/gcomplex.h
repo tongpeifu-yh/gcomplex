@@ -3,7 +3,7 @@ All member functions:
 	1. Properties of complex numbers
 		creal,cimag,real,imag,arg,abs,abs2,logabs,conj
 	2. Complex arithmetic operators
-		+ - * / = with gcomplex and with double
+		+ - * / = += -= *= /= with gcomplex and with double,= with gsl_complex
 	3. Elementary Complex Functions
 		sqrt,pow (with gcomplex and with double),exp,ln,log10,log
 
@@ -11,9 +11,19 @@ All friend functions
 	1. Properties of complex numbers
 		real,imag,arg,abs,abs2,logabs,conj
 	2. Complex arithmetic operators
-		+ - * / = with double
+		+ - * / with double
 	3. Elementary Complex Functions
 		sqrt,gsqrt (sqrt with double returning gcomplex),pow (with gcomplex and with double),exp,ln,log10,log
+	4. Complex Trigonometric Functions, Inverse Complex Trigonometric Functions
+		sin,cos,tan,sec,csc,cot,asin,acos,atan,asec,acsc,acot
+	5. Complex Hyperbolic Functions, Inverse Complex Hyperbolic Functions
+		sinh,cosh,tanh,sech,csch,coth,asinh,acosh,atanh,asech,acsch,acoth
+
+NOTE 
+	1. The memory of gcomplex should be the same as gsl_complex so that gcomplex[] can be compatible with gsl_complex[]. 
+	   Thus you should never add any virtual functions or non-static variables.
+
+TODO 
 
 */
 
@@ -64,7 +74,17 @@ public:
 	gcomplex operator *(double)const;
 	gcomplex operator /(double)const;
 
+	gcomplex& operator +=(const gcomplex&);
+	gcomplex& operator -=(const gcomplex&);
+	gcomplex& operator *=(const gcomplex&);
+	gcomplex& operator /=(const gcomplex&);
+	gcomplex& operator +=(double);
+	gcomplex& operator -=(double);
+	gcomplex& operator *=(double);
+	gcomplex& operator /=(double);
+
 	gcomplex& operator =(const gcomplex&);
+	gcomplex& operator =(const gsl_complex&);
 	gcomplex& operator =(double);
 
 

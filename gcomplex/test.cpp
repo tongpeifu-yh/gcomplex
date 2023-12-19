@@ -45,4 +45,13 @@ int main()
 	cout << sec(3.1415926 / 2) << endl;
 	cout << csc(3.1415926 / 2) << endl;
 	cout << cot(3.1415926 / 2) << endl;
+
+	f += 2 * I;
+	f /= 2;
+	f *= 3 + 0 * I;
+	f /= I;
+	f -= 3;
+	f -= 3 * I;
+	cout << "f=" << f << endl;
+	cout << sizeof(gcomplex)<<" "<<sizeof(gsl_complex)<<endl;
 }
