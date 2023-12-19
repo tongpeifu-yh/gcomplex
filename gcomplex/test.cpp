@@ -54,4 +54,7 @@ int main()
 	f -= 3 * I;
 	cout << "f=" << f << endl;
 	cout << sizeof(gcomplex)<<" "<<sizeof(gsl_complex)<<endl;
+
+	auto var = 5 + 4 * I;
+	cout << "var=" << var << endl;
 }

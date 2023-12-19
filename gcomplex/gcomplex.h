@@ -1,4 +1,6 @@
 /*
+gcomplex - a simple encapsulation of gsl gsl_complex
+
 All member functions:
 	1. Properties of complex numbers
 		creal,cimag,real,imag,arg,abs,abs2,logabs,conj
