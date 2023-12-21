@@ -2,7 +2,8 @@
 #include <iostream>
 #include <string>
 #include "gcomplex.h"
-
+#include <gsl/gsl_vector_complex_float.h>
+#include <complex>
 using namespace std;
 int main()
 {
@@ -57,4 +58,14 @@ int main()
 
 	auto var = 5 + 4 * I;
 	cout << "var=" << var << endl;
+	complex <double> x(1,99);
+	//sin(x);
+	cout << sizeof(x)<<endl;
+	double *xp = (double*) &x;
+	cout << xp[0] << "\t" << xp[1];
+	//gsl_complex_long_double
+	cout << 2. + 3i;
+	cosl(2.5);
+	sin(1.5);
+	csc(3.5);
 }
